@@ -1,0 +1,33 @@
+{
+  "name": "krishisetu-prototype",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"node server/index.js\" \"vite\"",
+    "build": "vite build",
+    "build:deploy": "npm run build && npm run db:migrate && npm run db:seed",
+    "preview": "vite preview",
+    "start": "node server/index.js",
+    "db:migrate": "node server/db.js migrate",
+    "db:seed": "node server/db.js seed",
+    "demo:reset": "node server/db.js reset",
+    "test": "node --test test/**/*.test.js"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "better-sqlite3": "latest",
+    "bcryptjs": "latest",
+    "concurrently": "latest",
+    "cors": "latest",
+    "cookie-parser": "latest",
+    "express": "latest",
+    "jsonwebtoken": "latest",
+    "lucide-react": "latest",
+    "vite": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {}
+}
